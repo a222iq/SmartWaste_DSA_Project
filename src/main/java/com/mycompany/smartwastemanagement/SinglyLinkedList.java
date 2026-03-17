@@ -17,6 +17,8 @@ public class SinglyLinkedList {
     
     public void addBin(WasteBin bin) {
         Node newNode = new Node(bin);
+// This method has a Time Complexity of O(n) because it traverses 
+// the entire list to add a node to the end.
         if (head == null) {
             head = newNode;
         } else {
@@ -48,7 +50,7 @@ public class SinglyLinkedList {
   
     public boolean removeBin(String id) {
         if (head == null) return false;
-
+// Search and Delete is O(n) as it performs a linear search for the ID.
                if (head.getData().getBinID().equals(id)) {
             head = head.getNext();
             size--;
