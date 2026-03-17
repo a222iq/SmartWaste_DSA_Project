@@ -155,7 +155,10 @@ javax.swing.JOptionPane.showMessageDialog(this, "Bin added successfully to the L
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btnDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayActionPerformed
-        txtDisplay.setText("Current Bins in System:\n");
+      if (txtID.getText().trim().isEmpty() || txtLocation.getText().trim().isEmpty()) {
+    javax.swing.JOptionPane.showMessageDialog(this, "Error: Bin ID and Location cannot be empty!", "Input Error", javax.swing.JOptionPane.ERROR_MESSAGE);
+    return; // Stop the method here so it doesn't add a blank bin
+}  txtDisplay.setText("Current Bins in System:\n"); 
 
 txtDisplay.append(binList.getAllBinsAsString());// TODO add your handling code here:
     }//GEN-LAST:event_btnDisplayActionPerformed
