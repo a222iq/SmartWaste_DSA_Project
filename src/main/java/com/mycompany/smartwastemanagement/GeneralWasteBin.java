@@ -3,7 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package com.mycompany.smartwastemanagement;
-
+// Author: Abdullah Albadry
 public class GeneralWasteBin extends WasteBin {
     private boolean hasCompactor;
 

@@ -132,13 +132,12 @@ String id = txtID.getText();
 String loc = txtLocation.getText();
 double cap = Double.parseDouble(txtCapacity.getText());
 
-// Create a new Bin object (using our GeneralWasteBin subclass for now)
+
 GeneralWasteBin newBin = new GeneralWasteBin(id, loc, cap, false);
 
-// Add it to our Singly Linked List
+
 binList.addBin(newBin);
 
-// Clear the fields for the next entry
 txtID.setText("");
 txtLocation.setText("");
 txtCapacity.setText("");
@@ -148,7 +147,7 @@ javax.swing.JOptionPane.showMessageDialog(this, "Bin added successfully to the L
 
     private void btnDisplayActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDisplayActionPerformed
         txtDisplay.setText("Current Bins in System:\n");
-// We need a way to get data out of the list
+
 txtDisplay.append(binList.getAllBinsAsString());// TODO add your handling code here:
     }//GEN-LAST:event_btnDisplayActionPerformed
 

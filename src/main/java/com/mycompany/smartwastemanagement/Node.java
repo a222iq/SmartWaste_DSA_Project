@@ -4,18 +4,18 @@
  */
 package com.mycompany.smartwastemanagement;
 
-
+// Author: Abdullah Albadry
 
 public class Node {
-    private WasteBin data; // The Bin object
-    private Node next;     // Link to the next node
+    private WasteBin data; 
+    private Node next;     
 
     public Node(WasteBin data) {
         this.data = data;
         this.next = null;
     }
 
-    // Getters and Setters (Required for the List to work)
+    
     public WasteBin getData() { return data; }
     public Node getNext() { return next; }
     public void setNext(Node next) { this.next = next; }
