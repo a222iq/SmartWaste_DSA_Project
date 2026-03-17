@@ -69,4 +69,16 @@ public class SinglyLinkedList {
         }
         return false;
     }
+    
+    public String getAllBinsAsString() {
+    StringBuilder sb = new StringBuilder();
+    Node current = head;
+    while (current != null) {
+        sb.append("ID: ").append(current.getData().getBinID())
+          .append(" | Location: ").append(current.getData().getLocation())
+          .append("\n");
+        current = current.getNext();
+    }
+    return sb.toString();
+}
 }
